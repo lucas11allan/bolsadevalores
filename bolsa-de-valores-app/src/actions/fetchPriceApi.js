@@ -19,11 +19,11 @@ const receivePriceSuccess = (price) => ({
   price,
 });
 
-export function fetchStarWar_PRICE() {
+export function fetchPrice(name) {
   return (dispatch) => {
     dispatch(requestPrice());
 
-    return getQuote()
+    return getQuote(name)
       .then(
         (companyInfo) => dispatch(receivePriceSuccess(companyInfo)),
         (error) => dispatch(receivePriceFailure(error.message)),

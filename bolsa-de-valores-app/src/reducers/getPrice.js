@@ -2,7 +2,7 @@ import {
   RECEIVE_PRICE_FAILURE,
   RECEIVE_PRICE_SUCCESS,
   REQUEST_PRICE,
-} from '../actions/fetchPlanetsApi';
+} from '../actions/fetchPriceApi';
 
 const INITIAL_STATE = {
   isFetching: false,
