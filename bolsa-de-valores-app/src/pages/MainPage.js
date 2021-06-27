@@ -1,20 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SearchBar from '../components/SearchBar';
 import Graphic from '../components/Graphic';
-import CompanyCard from '../components/CompanyCard';
+import RecentCompanys from '../components/RecentCompanys';
 
-class MainPage extends Component {
-  render() {
-    return (
-      <div>
-        <SearchBar />
-        <Graphic />
-        <div>
-          {Array.map(()=> <CompanyCard />)}
-        </div>
-      </div>
-    );
-  }
+function MainPage() {
+  return (
+    <div>
+      <SearchBar />
+      <Graphic />
+      <RecentCompanys />
+    </div>
+  );
 }
 
 export default MainPage;

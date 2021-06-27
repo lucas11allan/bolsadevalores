@@ -6,7 +6,7 @@ import positive from '../images/positivePath.svg';
 import negative from '../images/negativePath.svg';
 import loadValuesExist from '../actions/loadValuesExist';
 
-function CompanyCard(props) {
+function CompanyCardFavorite(props) {
   const { organizedData, loadOrganizedData } = props;
   const { name, companyName, change, isFavorite } = props.companyObject;
   const [direction, changeDirection] = useState('');
@@ -63,4 +63,4 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(CompanyCard);
+export default connect(mapStateToProps, mapDispatchToProps)(CompanyCardFavorite);

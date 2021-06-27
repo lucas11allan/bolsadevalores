@@ -19,13 +19,13 @@ function SearchBar(props) {
 
   useEffect(() => {
     if(dados.price != undefined){
-      if(organizedData.find(e => e.name == name.toUpperCase()) != undefined) {
-        const index = organizedData.findIndex(e => e.name == name.toUpperCase())
+      if(organizedData.find(e => e.name === name) !== undefined) {
+        const index = organizedData.findIndex(e => e.name === name)
         organizedData[index].price.push({name: new Date(dados.price.lastTradeTime), uv: dados.price.latestPrice});
         loadOrganizedDataExist(organizedData);
       } else {
         const input = {
-          name: dados.price.symbol,
+          name: dados.price.symbol.toUpperCase(),
           companyName: dados.price.companyName,
           price: [{name: new Date(dados.price.lastTradeTime), uv: dados.price.latestPrice}],
           change: dados.price.changePercent,
@@ -40,7 +40,7 @@ function SearchBar(props) {
     <div>
       <label htmlFor="filter-name">
         Procurar
-        <input name="company-name" type="text" onChange={(e) => changeName(e.target.value)} />
+        <input name="company-name" type="text" onChange={(e) => changeName(e.target.value.toUpperCase())} />
         <button onClick={clickButton}>Procurar</button>
       </label>
     </div>
