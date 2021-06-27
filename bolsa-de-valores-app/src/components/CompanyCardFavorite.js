@@ -1,66 +1,65 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import whiteHeart from '../images/whiteStarIcon.svg';
-import blueHeart from '../images/blueStarIcon.svg';
 import positive from '../images/positivePath.svg';
 import negative from '../images/negativePath.svg';
 import loadValuesExist from '../actions/loadValuesExist';
+import trash from '../images/trash.svg';
+import getCompany from '../actions/getCompany';
+import companyLogos from '../services/companyLogos';
+import '../styles/companyCardFavorite.css';
 
 function CompanyCardFavorite(props) {
-  const { organizedData, loadOrganizedData } = props;
-  const { name, companyName, change, isFavorite } = props.companyObject;
+  const { organizedData, loadOrganizedData, handleClickCard } = props;
+  const { name, companyName, change } = props.companyObject;
   const [direction, changeDirection] = useState('');
-  const [favoriteImg, setFavoriteImage] = useState(whiteHeart);
-  const [isFav, setIsfav] = useState(false);
+  const [logoImage, setlogoImage] = useState('');
 
   useEffect(() => {
-    if (isFavorite) {
-      setFavoriteImage(blueHeart);
-      setIsfav(true);
-    }
     if (change >= 0) {
       changeDirection(positive)
     } else {
       changeDirection(negative)
     }
+    if (companyLogos[name]) {
+      setlogoImage(companyLogos[name]);
+    }
   })
 
   const handleClick = () => {
-    const index = organizedData.findIndex(e => e.name === name)
-    if (!isFav) {
-      setIsfav(true);
-      setFavoriteImage(blueHeart);
-      organizedData[index].isFavorite = true;
-    } else {
-      setIsfav(false);
-      setFavoriteImage(whiteHeart);
-      organizedData[index].isFavorite = false;
-    }
-    
+    const index = organizedData.findIndex(e => e.name === name);
+    organizedData[index].isFavorite = false;
     loadOrganizedData(organizedData);
   }
 
+  const changeCompany = () => {
+    handleClickCard(name);
+  }
+
   return(
-    <div>
-      <img src={favoriteImg} onClick={handleClick}></img>
-      <div>{name}</div>
-      <div>{companyName}</div>
-      <div>
-        <span>{change}</span>        
-        <img src={direction}></img>
+    <div key={name} className="card">
+      <div onClick={changeCompany} className="flexHorizontal">
+        <img src={logoImage}></img>
+        <div className="company">
+          <div className="company-title">{name}</div>
+          <div className="company-name">{companyName}</div>
+        </div>
+        <div>
+          <span>{change}</span>        
+          <img src={direction}></img>
+        </div>
       </div>
+      <img src={trash} onClick={handleClick}></img>
     </div>
   );
 }
 
 const mapStateToProps = (state) => ({
-  dados: state.getPrice.data,
   organizedData: state.getCompany.companyInfo
 });
 
 const mapDispatchToProps = (dispatch) => ({
   loadOrganizedData: (e) => dispatch(loadValuesExist(e)),
+  handleClickCard: (e) => dispatch(getCompany(e))
 });
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(CompanyCardFavorite);

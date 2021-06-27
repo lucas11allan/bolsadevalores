@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
-import CompanyCard from '../components/CompanyCard';
+import React from 'react';
+import CompanyCardFavorite from '../components/CompanyCardFavorite';
 import { connect } from 'react-redux';
+import blueStar from '../images/blueStarIcon.svg';
 
 function FavoriteBar(props) {
   const { lastResearch } = props;
 
   return (
     <div>
-      <span>Empresas Recentes</span>
+      <div className="container-title">
+        <img src={blueStar}></img>
+        <span>Empresas Favoritas</span>
+      </div>
       <div>
-        {lastResearch.map((e)=> <CompanyCard companyObject={e} />)}
+        {lastResearch.filter(e => e.isFavorite === true)
+          .map((e)=> <CompanyCardFavorite companyObject={e} />)}
       </div>
     </div>
   );

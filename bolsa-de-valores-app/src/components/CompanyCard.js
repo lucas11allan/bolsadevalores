@@ -5,49 +5,64 @@ import blueHeart from '../images/blueStarIcon.svg';
 import positive from '../images/positivePath.svg';
 import negative from '../images/negativePath.svg';
 import loadValuesExist from '../actions/loadValuesExist';
+import getCompany from '../actions/getCompany';
+import companyLogos from '../services/companyLogos';
+import '../styles/companyCard.css';
 
 function CompanyCard(props) {
-  const { organizedData, loadOrganizedData } = props;
+  const { organizedData, loadOrganizedData, handleClickCard } = props;
   const { name, companyName, change, isFavorite } = props.companyObject;
   const [direction, changeDirection] = useState('');
   const [favoriteImg, setFavoriteImage] = useState(whiteHeart);
-  const [isFav, setIsfav] = useState(false);
+  const [logoImage, setlogoImage] = useState('');
 
   useEffect(() => {
     if (isFavorite) {
       setFavoriteImage(blueHeart);
-      setIsfav(true);
+    } else {
+      setFavoriteImage(whiteHeart);
     }
     if (change >= 0) {
       changeDirection(positive)
     } else {
       changeDirection(negative)
     }
+    if (companyLogos[name]) {
+      setlogoImage(companyLogos[name]);
+    }
   })
 
   const handleClick = () => {
     const index = organizedData.findIndex(e => e.name === name)
-    if (!isFav) {
-      setIsfav(true);
+    if (!isFavorite) {
       setFavoriteImage(blueHeart);
       organizedData[index].isFavorite = true;
     } else {
-      setIsfav(false);
       setFavoriteImage(whiteHeart);
       organizedData[index].isFavorite = false;
     }
-    
     loadOrganizedData(organizedData);
   }
 
+  const changeCompany = () => {
+    handleClickCard(name);
+  }
+
   return(
-    <div>
-      <img src={favoriteImg} onClick={handleClick}></img>
-      <div>{name}</div>
-      <div>{companyName}</div>
-      <div>
-        <span>{change}</span>        
-        <img src={direction}></img>
+    <div key={name} className="card auto-layout white">
+      <div className="insideCard">
+        <img src={favoriteImg} onClick={handleClick} className=""></img>
+        <img src={logoImage} className="logo-empresa"></img>
+        <div onClick={changeCompany} className="text-card">
+          <div>
+            <div className="name">{name}</div>
+            <div className="companyName">{companyName}</div>
+          </div>
+          <div>
+            <span>{change}</span>        
+            <img src={direction}></img>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -60,6 +75,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   loadOrganizedData: (e) => dispatch(loadValuesExist(e)),
+  handleClickCard: (e) => dispatch(getCompany(e))
 });
 
 
