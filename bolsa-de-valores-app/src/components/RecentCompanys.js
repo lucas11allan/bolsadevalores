@@ -13,7 +13,8 @@ function RecentCompanys(props) {
         <span>Empresas Recentes</span>
       </div>
       <div className="carousel">
-        {lastResearch.map((e)=> <CompanyCard companyObject={e} />)}
+        {lastResearch.sort((a, b) => b.timeResearch - a.timeResearch)
+          .map((e)=> <CompanyCard companyObject={e} />)}
       </div>
     </div>
   );

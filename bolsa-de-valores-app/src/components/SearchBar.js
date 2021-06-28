@@ -5,6 +5,7 @@ import { fetchPrice } from '../actions/fetchPriceApi';
 import getCompany from '../actions/getCompany';
 import loadValues from '../actions/loadValues';
 import loadValuesExist from '../actions/loadValuesExist';
+import handleDate from '../services/handleDate';
 
 
 function SearchBar(props) {
@@ -21,15 +22,17 @@ function SearchBar(props) {
     if(dados.price != undefined){
       if(organizedData.find(e => e.name === name) !== undefined) {
         const index = organizedData.findIndex(e => e.name === name)
-        organizedData[index].price.push({name: new Date(dados.price.lastTradeTime), uv: dados.price.latestPrice});
+        organizedData[index].price.push({name: handleDate(dados.price.lastTradeTime), valor: dados.price.latestPrice});
+        organizedData[index].timeResearch = new Date();
         loadOrganizedDataExist(organizedData);
       } else {
         const input = {
           name: dados.price.symbol.toUpperCase(),
           companyName: dados.price.companyName,
-          price: [{name: new Date(dados.price.lastTradeTime), uv: dados.price.latestPrice}],
+          price: [{name: handleDate(dados.price.lastTradeTime), valor: dados.price.latestPrice}],
           change: dados.price.changePercent,
-          isFavorite: false
+          isFavorite: false,
+          timeResearch: new Date()
         };
         loadOrganizedData(input);
       }

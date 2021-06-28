@@ -6,6 +6,7 @@ import FavoriteBar from '../components/FavoriteBar';
 import Home from '../components/Home';
 import User from '../components/User';
 import Title from '../components/Title';
+import GraphicHeader from '../components/GraphicHeader';
 import '../styles/index.css';
 
 function MainPage() {
@@ -15,6 +16,7 @@ function MainPage() {
       <div className="main-container">
         <Title />
         <SearchBar />
+        <GraphicHeader />
         <Graphic />
         <RecentCompanys />
       </div>
