@@ -17,9 +17,7 @@ function GraphicHeader(props) {
   useEffect(() => {
     const index = organizedData.findIndex(e => e.name === symbol);
     setCompanyObject(organizedData[index]);
-    console.log(companyObject);
     if (companyObject) {
-      console.log('teste');
       if (companyObject.isFavorite) {
         setFavoriteImage(blueHeart);
       } else {
@@ -48,8 +46,8 @@ function GraphicHeader(props) {
   if (!companyObject) return <div></div>;
 
   return(
-    <div key={companyObject.name} className="card auto-layout white">
-      <div className="insideCard">
+    <div key={companyObject.name} className="back-white">
+      <div className="graph-header">
         <img src={favoriteImg} onClick={handleClick} className=""></img>
         <div className="text-card">
           <div>
@@ -57,8 +55,11 @@ function GraphicHeader(props) {
             <div className="companyName">{companyObject.companyName}</div>
           </div>
           <div>
-            <span>{companyObject.change}</span>        
-            <img src={direction}></img>
+            <div>     
+              <img src={direction}></img>
+              <span>{`$${companyObject.price.slice(-1)[0].valor}`}</span>   
+            </div>
+            <span>{`$${companyObject.changeValue}(${companyObject.change}%)`}</span>
           </div>
         </div>
       </div>

@@ -16,15 +16,16 @@ function MainPage() {
       <div className="main-container">
         <Title />
         <SearchBar />
-        <GraphicHeader />
-        <Graphic />
+        <div className="back-white">
+          <GraphicHeader />
+          <Graphic />
+        </div>
         <RecentCompanys />
       </div>
       <div>
         <User />
         <FavoriteBar /> 
-      </div>
-         
+      </div> 
     </div>
   );
 }

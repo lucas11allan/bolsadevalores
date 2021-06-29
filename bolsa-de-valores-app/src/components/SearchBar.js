@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-
 import { fetchPrice } from '../actions/fetchPriceApi';
 import getCompany from '../actions/getCompany';
 import loadValues from '../actions/loadValues';
 import loadValuesExist from '../actions/loadValuesExist';
 import handleDate from '../services/handleDate';
+import search from '../images/search.svg';
 
 
 function SearchBar(props) {
@@ -31,6 +31,7 @@ function SearchBar(props) {
           companyName: dados.price.companyName,
           price: [{name: handleDate(dados.price.lastTradeTime), valor: dados.price.latestPrice}],
           change: dados.price.changePercent,
+          changeValue: dados.price.change,
           isFavorite: false,
           timeResearch: new Date()
         };
@@ -41,11 +42,13 @@ function SearchBar(props) {
 
   return (
     <div>
-      <label htmlFor="filter-name">
-        Procurar
-        <input name="company-name" type="text" onChange={(e) => changeName(e.target.value.toUpperCase())} />
-        <button onClick={clickButton}>Procurar</button>
-      </label>
+      <div htmlFor="filter-name">
+        <input
+          name="company-name" type="text" placeholder="Buscar empresa"
+          onChange={(e) => changeName(e.target.value.toUpperCase())}
+        />
+        <button onClick={clickButton}><img src={search}></img></button>
+      </div>
     </div>
   );
 }
