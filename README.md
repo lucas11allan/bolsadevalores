@@ -1,11 +1,13 @@
 # bolsadevalores
 
-npm install react-redux
+Para testar a página, instale todas as dependencias listadas abaixo:
 
-npm install --save redux react-redux
+	npm install react-redux
 
-npm install redux-thunk
+	npm install --save redux react-redux
 
-npm install redux-devtools-extension
+	npm install redux-thunk
 
-npm install recharts
+	npm install redux-devtools-extension
+
+	npm install recharts
