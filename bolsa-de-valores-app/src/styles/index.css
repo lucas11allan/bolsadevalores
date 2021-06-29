@@ -1,0 +1,168 @@
+.flexHorizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.flexVertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 761px;
+  height: 142px;
+  left: 0px;
+  top: 27px;
+  overflow-x: scroll;
+  background: #F5F8FA;
+}
+
+.user {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  border: solid #F5F8FA;
+  width: 200px;
+  height: 40px;
+}
+
+.logoImage {
+  position: absolute;
+  left: 0%;
+  right: 20%;
+  top: 0%;
+  bottom: 91.01%;
+}
+
+.home-objects {
+  position: absolute;
+  left: 0%;
+  right: 20%;
+  top: 13.98%;
+  bottom: 80.02%;
+}
+
+.icon-home {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 28px;
+  top: 8px;
+}
+
+.rec197 {
+  position: absolute;
+  left: 57.81%;
+  right: 3.12%;
+  top: 57.81%;
+  bottom: 3.12%;
+}
+
+.rec195 {
+  position: absolute;
+  left: 57.81%;
+  right: 3.12%;
+  top: 3.12%;
+  bottom: 57.81%;  
+}
+
+.rec196 {
+  position: absolute;
+  left: 3.12%;
+  right: 57.81%;
+  top: 57.81%;
+  bottom: 3.12%;
+}
+
+.rec194 {
+  position: absolute;
+  left: 3.12%;
+  right: 57.81%;
+  top: 3.12%;
+  bottom: 57.81%;
+}
+
+.recPrimaryDark {
+  background: #0047BB;
+  border-radius: 2px;
+}
+
+.recPrimary {
+  background: #0047BB;
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+.rectangle {
+  position: absolute;
+  width: 4px;
+  height: 48px;
+  left: 0px;
+  top: 0px;
+  background: #F06400;
+  border-radius: 0px 12px 12px 0px;
+}
+
+.home {
+  position: absolute;
+  left: 0%;
+  right: 20%;
+  top: 0%;
+  bottom: 91.01%;
+}
+
+.monetus-logo{
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  left: 25px;
+  top: 20px;
+}
+
+.shape {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.navigation {
+  position: absolute;
+  left: 0%;
+  right: 90.62%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.recent-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.container-title {
+  padding: 20px 0;
+}
+
+.main-container {
+  background: #F5F8FA;
+}
+
+.graph-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.back-white {
+  background: white;
+}
