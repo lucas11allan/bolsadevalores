@@ -49,7 +49,7 @@ function CompanyCard(props) {
   }
 
   return(
-    <div key={name} className="card auto-layout white" onClick={changeCompany}>
+    <div key={name} className="card auto-layout white click" onClick={changeCompany}>
       <div className="insideCard">
         <img src={favoriteImg} onClick={handleClick} className=""></img>
         <img src={logoImage} className="logo-empresa"></img>

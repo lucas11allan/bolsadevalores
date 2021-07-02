@@ -36,7 +36,7 @@ function CompanyCardFavorite(props) {
   }
 
   return(
-    <div key={name} className="card">
+    <div key={name} className="card click">
       <div onClick={changeCompany} className="flexHorizontal">
         <img src={logoImage}></img>
         <div className="company">
