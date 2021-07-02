@@ -7,8 +7,8 @@ function Graphic(props) {
   const [data, changeData] = useState([]);
 
   useEffect(() => {
-    const index = organizedData.findIndex(e => e.name == actualCompany.toUpperCase())
-    if (index != undefined) {
+    const index = organizedData.findIndex(e => e.name == actualCompany.toUpperCase());
+    if (index >= 0 && organizedData.length > 0) {
       changeData(organizedData[index].price);
     }
   })

@@ -32,7 +32,7 @@ function GraphicHeader(props) {
   })
 
   const handleClick = () => {
-    const index = organizedData.findIndex(e => e.name === organizedData.name)
+    const index = organizedData.findIndex(e => e.name === symbol);
     if (!companyObject.isFavorite) {
       setFavoriteImage(blueHeart);
       organizedData[index].isFavorite = true;

@@ -166,3 +166,7 @@
 .back-white {
   background: white;
 }
+
+.click {
+  cursor: pointer;
+}
