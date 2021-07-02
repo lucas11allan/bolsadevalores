@@ -46,14 +46,17 @@ function GraphicHeader(props) {
   if (!companyObject) return <div></div>;
 
   return(
-    <div key={companyObject.name} className="back-white">
-      <div className="graph-header">
+    <div key={companyObject.name} className="graph-header">
+      <div className="identification">
         <img src={favoriteImg} onClick={handleClick} className=""></img>
         <div className="text-card">
           <div>
             <div className="name">{companyObject.name}</div>
             <div className="companyName">{companyObject.companyName}</div>
           </div>
+        </div>
+      </div>
+      <div className="info">
           <div>
             <div>     
               <img src={direction}></img>
@@ -63,7 +66,6 @@ function GraphicHeader(props) {
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
