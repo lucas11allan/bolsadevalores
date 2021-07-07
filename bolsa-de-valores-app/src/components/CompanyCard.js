@@ -15,6 +15,7 @@ function CompanyCard(props) {
   const [direction, changeDirection] = useState('');
   const [favoriteImg, setFavoriteImage] = useState(whiteHeart);
   const [logoImage, setlogoImage] = useState('');
+  const [color, setcolor] = useState('');
 
   useEffect(() => {
     if (isFavorite) {
@@ -23,9 +24,11 @@ function CompanyCard(props) {
       setFavoriteImage(whiteHeart);
     }
     if (change >= 0) {
-      changeDirection(positive)
+      changeDirection(positive);
+      setcolor('color-green');
     } else {
-      changeDirection(negative)
+      changeDirection(negative);
+      setcolor('color-red');
     }
     if (companyLogos[name]) {
       setlogoImage(companyLogos[name]);
@@ -58,7 +61,7 @@ function CompanyCard(props) {
             <div className="name">{name}</div>
             <div className="companyName">{companyName}</div>
           </div>
-          <div>
+          <div className={color}>
             <span>{change}</span>        
             <img src={direction}></img>
           </div>
