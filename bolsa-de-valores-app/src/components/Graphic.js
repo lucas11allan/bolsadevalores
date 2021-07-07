@@ -25,8 +25,8 @@ function Graphic(props) {
 }
 
 const mapStateToProps = (state) => ({
-  organizedData: state.getCompany.companyInfo,
-  actualCompany: state.getCompany.name
+  organizedData: state.companysInfo.companyInfo,
+  actualCompany: state.companysInfo.name
 });
 
 export default connect(mapStateToProps)(Graphic);

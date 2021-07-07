@@ -54,8 +54,8 @@ function SearchBar(props) {
 }
 
 const mapStateToProps = (state) => ({
-  dados: state.getPrice.data,
-  organizedData: state.getCompany.companyInfo
+  dados: state.dadosAPI.data,
+  organizedData: state.companysInfo.companyInfo
 });
 
 const mapDispatchToProps = (dispatch) => ({
