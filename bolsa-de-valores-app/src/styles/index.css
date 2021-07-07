@@ -53,6 +53,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  border-radius: 24px 0px 0px 0px;
 }
 
 .graph-header {
@@ -137,4 +138,21 @@
   justify-content: flex-start;
   align-items: center;
   align-content: center;
+}
+
+.favorite-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.favorite-title {
+  padding: 0px 10px;
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: #14171A;
 }

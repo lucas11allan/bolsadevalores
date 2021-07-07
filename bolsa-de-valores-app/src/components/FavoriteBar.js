@@ -7,10 +7,10 @@ function FavoriteBar(props) {
   const { lastResearch } = props;
 
   return (
-    <div>
+    <div className="favorite-container">
       <div className="container-title">
         <img src={blueStar}></img>
-        <span>Empresas Favoritas</span>
+        <span className="favorite-title">Empresas Favoritas</span>
       </div>
       <div>
         {lastResearch.filter(e => e.isFavorite === true)
