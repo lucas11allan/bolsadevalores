@@ -3,9 +3,9 @@ import dash from '../images/dashboard.svg';
 
 function Title() {
   return (
-    <div className="user">
+    <div className="title">
       <img src={dash}></img>
-      <span>Dashboard</span>
+      <span className="title-text">Dashboard</span>
     </div>
   );
 }

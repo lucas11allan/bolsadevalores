@@ -35,6 +35,7 @@ function GraphicHeader(props) {
   })
 
   const handleClick = () => {
+    console.log('teste');
     const index = organizedData.findIndex(e => e.name === symbol);
     if (!companyObject.isFavorite) {
       setFavoriteImage(blueHeart);
@@ -44,6 +45,7 @@ function GraphicHeader(props) {
       organizedData[index].isFavorite = false;
     }
     loadOrganizedData(organizedData);
+    
   }
 
   if (!companyObject) return <div></div>;
@@ -51,7 +53,7 @@ function GraphicHeader(props) {
   return(
     <div key={companyObject.name} className="graph-header">
       <div className="identification">
-        <img src={favoriteImg} onClick={handleClick} className=""></img>
+        <img src={favoriteImg} onClick={handleClick} className="click"></img>
         <div className="text-card">
           <div>
             <div className="name">{companyObject.name}</div>

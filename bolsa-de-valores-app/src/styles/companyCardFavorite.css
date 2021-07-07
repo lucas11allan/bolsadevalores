@@ -1,9 +1,11 @@
-.card {
+.card-favorite {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
   height: 69px;
+  width: 400px;
   margin: 15px;
   background: #FFFFFF;
   box-shadow: 0px 8px 20px -2px rgba(43, 37, 63, 0.1);
@@ -11,16 +13,15 @@
 }
 
 .company {
-  width: 128.52px;
-  height: 45px;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: normal;
   letter-spacing: -0.0075em;
   color: #14171A;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2px;
 }
 
 .company-title {
@@ -31,4 +32,26 @@
 
 .company-name{
 
+}
+
+.inside-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.complete-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 360px;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }

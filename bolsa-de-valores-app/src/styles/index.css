@@ -1,7 +1,9 @@
 .flexHorizontal {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
+  width: 100vw;
+  height: 100vh;
 }
 
 .flexVertical {
@@ -13,7 +15,7 @@
 .carousel {
   display: flex;
   flex-flow: row nowrap;
-  width: 761px;
+  width: 50vw;
   height: 142px;
   left: 0px;
   top: 27px;
@@ -28,117 +30,8 @@
   align-items: center;
   border-radius: 5px;
   border: solid #F5F8FA;
-  width: 200px;
+  width: 350px;
   height: 40px;
-}
-
-.logoImage {
-  position: absolute;
-  left: 0%;
-  right: 20%;
-  top: 0%;
-  bottom: 91.01%;
-}
-
-.home-objects {
-  position: absolute;
-  left: 0%;
-  right: 20%;
-  top: 13.98%;
-  bottom: 80.02%;
-}
-
-.icon-home {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  left: 28px;
-  top: 8px;
-}
-
-.rec197 {
-  position: absolute;
-  left: 57.81%;
-  right: 3.12%;
-  top: 57.81%;
-  bottom: 3.12%;
-}
-
-.rec195 {
-  position: absolute;
-  left: 57.81%;
-  right: 3.12%;
-  top: 3.12%;
-  bottom: 57.81%;  
-}
-
-.rec196 {
-  position: absolute;
-  left: 3.12%;
-  right: 57.81%;
-  top: 57.81%;
-  bottom: 3.12%;
-}
-
-.rec194 {
-  position: absolute;
-  left: 3.12%;
-  right: 57.81%;
-  top: 3.12%;
-  bottom: 57.81%;
-}
-
-.recPrimaryDark {
-  background: #0047BB;
-  border-radius: 2px;
-}
-
-.recPrimary {
-  background: #0047BB;
-  opacity: 0.6;
-  border-radius: 2px;
-}
-
-.rectangle {
-  position: absolute;
-  width: 4px;
-  height: 48px;
-  left: 0px;
-  top: 0px;
-  background: #F06400;
-  border-radius: 0px 12px 12px 0px;
-}
-
-.home {
-  position: absolute;
-  left: 0%;
-  right: 20%;
-  top: 0%;
-  bottom: 91.01%;
-}
-
-.monetus-logo{
-  position: absolute;
-  width: 46px;
-  height: 46px;
-  left: 25px;
-  top: 20px;
-}
-
-.shape {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-}
-
-.navigation {
-  position: absolute;
-  left: 0%;
-  right: 90.62%;
-  top: 0%;
-  bottom: 0%;
 }
 
 .recent-container {
@@ -155,6 +48,11 @@
 .main-container {
   background: #F5F8FA;
   padding: 20px;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .graph-header {
@@ -184,4 +82,59 @@
 
 .color-red {
   color: #D64B45;
+}
+
+.home-container {
+  width: 7vw;
+}
+
+.favorite-container {
+  width: 20vw;
+  padding: 15px;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title-text {
+  font-family: Graphik;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.0075em;
+  padding: 0px 5px;
+}
+
+.search {
+  padding: 25px 0px;
+}
+
+.input {
+  padding: 8px 16px;
+  width: 364px;
+  height: 30px;
+
+  background: #FFFFFF;
+  border: 1px solid #E1E0E7;
+  border-radius: 8px;
+}
+
+.button {
+  width: 47px;
+  height: 47px;
+  background: #0047BB;
+  border-radius: 8px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
 }

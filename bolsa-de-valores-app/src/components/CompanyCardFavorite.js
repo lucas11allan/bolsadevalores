@@ -39,16 +39,20 @@ function CompanyCardFavorite(props) {
   }
 
   return(
-    <div key={name} className="card click">
-      <div onClick={changeCompany} className="flexHorizontal">
-        <img src={logoImage}></img>
-        <div className="company">
-          <div className="company-title">{name}</div>
-          <div className="company-name">{companyName}</div>
-        </div>
-        <div className={color}>
-          <span>{change}</span>        
-          <img src={direction}></img>
+    <div className="complete-card click">
+      <div key={name} className="card-favorite">
+        <div onClick={changeCompany} className="inside-card">
+          <div className="company-info">
+            <img src={logoImage}></img>
+            <div className="company">
+              <div className="company-title">{name}</div>
+              <div className="company-name">{companyName}</div>
+            </div>
+          </div>
+          <div className={color}>
+            <span>{change}</span>        
+            <img src={direction}></img>
+          </div>
         </div>
       </div>
       <img src={trash} onClick={handleClick}></img>
