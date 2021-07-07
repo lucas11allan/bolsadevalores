@@ -21,7 +21,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 2px;
+  padding: 0px 10px;
 }
 
 .company-title {
@@ -39,6 +39,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 300px;
 }
 
 .complete-card {
