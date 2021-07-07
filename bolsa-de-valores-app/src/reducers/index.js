@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import getPrice from './getPrice';
-import getCompany from './getCompany';
+import dadosAPI from './dadosAPI';
+import companysInfo from './companysInfo';
 
 export default combineReducers({
-  getPrice,
-  getCompany,
+  dadosAPI,
+  companysInfo,
 });

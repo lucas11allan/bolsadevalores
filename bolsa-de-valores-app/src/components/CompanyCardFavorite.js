@@ -54,7 +54,7 @@ function CompanyCardFavorite(props) {
 }
 
 const mapStateToProps = (state) => ({
-  organizedData: state.getCompany.companyInfo
+  organizedData: state.companysInfo.companyInfo
 });
 
 const mapDispatchToProps = (dispatch) => ({

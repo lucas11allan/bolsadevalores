@@ -68,9 +68,9 @@ function GraphicHeader(props) {
 }
 
 const mapStateToProps = (state) => ({
-  dados: state.getPrice.data,
-  organizedData: state.getCompany.companyInfo,
-  symbol: state.getCompany.name
+  dados: state.dadosAPI.data,
+  organizedData: state.companysInfo.companyInfo,
+  symbol: state.companysInfo.name
 });
 
 const mapDispatchToProps = (dispatch) => ({

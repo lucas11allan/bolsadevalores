@@ -21,7 +21,7 @@ function RecentCompanys(props) {
 }
 
 const mapStateToProps = (state) => ({
-  lastResearch: state.getCompany.companyInfo
+  lastResearch: state.companysInfo.companyInfo
 });
 
 export default connect(mapStateToProps)(RecentCompanys);
