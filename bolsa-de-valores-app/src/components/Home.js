@@ -1,15 +1,12 @@
 import React from 'react';
 import home from '../images/home.svg';
+import '../styles/home.css';
 
-function Home(props) {
+function Home() {
   return (
-    <div className="navigation">
-      <div className="home">
-        <div className="monetus-logo">
-          <div className="shape">
-            <img src={home}></img>
-          </div>
-        </div>
+    <div className="home-container">
+      <div className="monetus-logo">
+        <img src={home}></img>
       </div>
       <div className="home-objects">
         <div className="rectangle"></div>

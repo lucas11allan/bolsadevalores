@@ -41,13 +41,14 @@ function SearchBar(props) {
   }, [dados])
 
   return (
-    <div>
-      <div htmlFor="filter-name">
+    <div className="search">
+      <div htmlFor="filter-name" className="input-container">
         <input
           name="company-name" type="text" placeholder="Buscar empresa"
           onChange={(e) => changeName(e.target.value.toUpperCase())}
+          className="input"
         />
-        <button onClick={clickButton}><img src={search}></img></button>
+        <button onClick={clickButton} className="button"><img src={search}></img></button>
       </div>
     </div>
   );

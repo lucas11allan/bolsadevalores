@@ -22,7 +22,7 @@ function MainPage() {
         </div>
         <RecentCompanys />
       </div>
-      <div>
+      <div className="favorite-container">
         <User />
         <FavoriteBar /> 
       </div> 

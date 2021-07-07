@@ -1,0 +1,78 @@
+.home-objects {
+  position: absolute;
+  left: 0%;
+  right: 20%;
+  top: 13.98%;
+  bottom: 80.02%;
+}
+
+.icon-home {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 28px;
+  top: 8px;
+}
+
+.rec197 {
+  position: absolute;
+  left: 57.81%;
+  right: 3.12%;
+  top: 57.81%;
+  bottom: 3.12%;
+}
+
+.rec195 {
+  position: absolute;
+  left: 57.81%;
+  right: 3.12%;
+  top: 3.12%;
+  bottom: 57.81%;  
+}
+
+.rec196 {
+  position: absolute;
+  left: 3.12%;
+  right: 57.81%;
+  top: 57.81%;
+  bottom: 3.12%;
+}
+
+.rec194 {
+  position: absolute;
+  left: 3.12%;
+  right: 57.81%;
+  top: 3.12%;
+  bottom: 57.81%;
+}
+
+.recPrimaryDark {
+  background: #0047BB;
+  border-radius: 2px;
+}
+
+.recPrimary {
+  background: #0047BB;
+  opacity: 0.6;
+  border-radius: 2px;
+}
+
+.rectangle {
+  position: absolute;
+  width: 4px;
+  height: 48px;
+  left: 0px;
+  top: 0px;
+  background: #F06400;
+  border-radius: 0px 12px 12px 0px;
+}
+
+
+
+.monetus-logo{
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  left: 0px;
+  top: 10px;
+}
