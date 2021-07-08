@@ -13,4 +13,5 @@ Para testar a página, instale todas as dependencias listadas abaixo:
 	npm install recharts
 	
 Para rodar a página, utilize o comando
+
 	npm start
